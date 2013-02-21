@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C777233816D4BB0900AC8158 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C777233216D4BB0900AC8158 /* libzbar.a */; };
+		C777233916D4BB0900AC8158 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = C777233416D4BB0900AC8158 /* zbar-back.png */; };
+		C777233A16D4BB0900AC8158 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = C777233516D4BB0900AC8158 /* zbar-help.html */; };
+		C777233B16D4BB0900AC8158 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = C777233616D4BB0900AC8158 /* zbar-helpicons.png */; };
+		C777233C16D4BB0900AC8158 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = C777233716D4BB0900AC8158 /* zbar-samples.png */; };
+		C777233E16D5E3A400AC8158 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C777233D16D5E3A300AC8158 /* AVFoundation.framework */; };
+		C777234016D5E3AE00AC8158 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C777233F16D5E3AE00AC8158 /* CoreMedia.framework */; };
+		C777234216D5E3B600AC8158 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C777234116D5E3B600AC8158 /* CoreVideo.framework */; };
+		C777234416D5E3C200AC8158 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C777234316D5E3C200AC8158 /* QuartzCore.framework */; };
+		C777234616D5E3CC00AC8158 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C777234516D5E3CC00AC8158 /* libiconv.dylib */; };
+		C7A8B14C16D4B8E100507C4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8B14B16D4B8E100507C4E /* UIKit.framework */; };
+		C7A8B14E16D4B8E100507C4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8B14D16D4B8E100507C4E /* Foundation.framework */; };
+		C7A8B15016D4B8E100507C4E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8B14F16D4B8E100507C4E /* CoreGraphics.framework */; };
+		C7A8B15616D4B8E100507C4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A8B15416D4B8E100507C4E /* InfoPlist.strings */; };
+		C7A8B15816D4B8E100507C4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B15716D4B8E100507C4E /* main.m */; };
+		C7A8B15C16D4B8E100507C4E /* SECAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B15B16D4B8E100507C4E /* SECAppDelegate.m */; };
+		C7A8B15E16D4B8E100507C4E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A8B15D16D4B8E100507C4E /* Default.png */; };
+		C7A8B16016D4B8E100507C4E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A8B15F16D4B8E100507C4E /* Default@2x.png */; };
+		C7A8B16216D4B8E100507C4E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A8B16116D4B8E100507C4E /* Default-568h@2x.png */; };
+		C7A8B16516D4B8E100507C4E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8B16316D4B8E100507C4E /* MainStoryboard_iPhone.storyboard */; };
+		C7A8B16816D4B8E100507C4E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8B16616D4B8E100507C4E /* MainStoryboard_iPad.storyboard */; };
+		C7A8B16B16D4B8E100507C4E /* SECViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B16A16D4B8E100507C4E /* SECViewController.m */; };
+		C7A8B17316D4B8E100507C4E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8B17216D4B8E100507C4E /* SenTestingKit.framework */; };
+		C7A8B17416D4B8E100507C4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8B14B16D4B8E100507C4E /* UIKit.framework */; };
+		C7A8B17516D4B8E100507C4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8B14D16D4B8E100507C4E /* Foundation.framework */; };
+		C7A8B17D16D4B8E100507C4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A8B17B16D4B8E100507C4E /* InfoPlist.strings */; };
+		C7A8B18016D4B8E100507C4E /* SchoolaxEventAdminTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B17F16D4B8E100507C4E /* SchoolaxEventAdminTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C7A8B17616D4B8E100507C4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7A8B14016D4B8E100507C4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7A8B14716D4B8E100507C4E;
+			remoteInfo = SchoolaxEventAdmin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C777231E16D4BB0900AC8158 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		C777231F16D4BB0900AC8158 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		C777232016D4BB0900AC8158 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		C777232116D4BB0900AC8158 /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		C777232216D4BB0900AC8158 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		C777232316D4BB0900AC8158 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		C777232416D4BB0900AC8158 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		C777232516D4BB0900AC8158 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		C777232616D4BB0900AC8158 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		C777232716D4BB0900AC8158 /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		C777232816D4BB0900AC8158 /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		C777232916D4BB0900AC8158 /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		C777232A16D4BB0900AC8158 /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		C777232B16D4BB0900AC8158 /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		C777232C16D4BB0900AC8158 /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		C777232D16D4BB0900AC8158 /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		C777232E16D4BB0900AC8158 /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		C777232F16D4BB0900AC8158 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		C777233016D4BB0900AC8158 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		C777233116D4BB0900AC8158 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		C777233216D4BB0900AC8158 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		C777233416D4BB0900AC8158 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		C777233516D4BB0900AC8158 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		C777233616D4BB0900AC8158 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		C777233716D4BB0900AC8158 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		C777233D16D5E3A300AC8158 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C777233F16D5E3AE00AC8158 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C777234116D5E3B600AC8158 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		C777234316D5E3C200AC8158 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C777234516D5E3CC00AC8158 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		C7A8B14816D4B8E100507C4E /* SchoolaxEventAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolaxEventAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A8B14B16D4B8E100507C4E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C7A8B14D16D4B8E100507C4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C7A8B14F16D4B8E100507C4E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C7A8B15316D4B8E100507C4E /* SchoolaxEventAdmin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SchoolaxEventAdmin-Info.plist"; sourceTree = "<group>"; };
+		C7A8B15516D4B8E100507C4E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C7A8B15716D4B8E100507C4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7A8B15916D4B8E100507C4E /* SchoolaxEventAdmin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SchoolaxEventAdmin-Prefix.pch"; sourceTree = "<group>"; };
+		C7A8B15A16D4B8E100507C4E /* SECAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SECAppDelegate.h; sourceTree = "<group>"; };
+		C7A8B15B16D4B8E100507C4E /* SECAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SECAppDelegate.m; sourceTree = "<group>"; };
+		C7A8B15D16D4B8E100507C4E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C7A8B15F16D4B8E100507C4E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C7A8B16116D4B8E100507C4E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C7A8B16416D4B8E100507C4E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		C7A8B16716D4B8E100507C4E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		C7A8B16916D4B8E100507C4E /* SECViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SECViewController.h; sourceTree = "<group>"; };
+		C7A8B16A16D4B8E100507C4E /* SECViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SECViewController.m; sourceTree = "<group>"; };
+		C7A8B17116D4B8E100507C4E /* SchoolaxEventAdminTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchoolaxEventAdminTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A8B17216D4B8E100507C4E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C7A8B17A16D4B8E100507C4E /* SchoolaxEventAdminTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SchoolaxEventAdminTests-Info.plist"; sourceTree = "<group>"; };
+		C7A8B17C16D4B8E100507C4E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C7A8B17E16D4B8E100507C4E /* SchoolaxEventAdminTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SchoolaxEventAdminTests.h; sourceTree = "<group>"; };
+		C7A8B17F16D4B8E100507C4E /* SchoolaxEventAdminTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchoolaxEventAdminTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7A8B14516D4B8E100507C4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C777234616D5E3CC00AC8158 /* libiconv.dylib in Frameworks */,
+				C777234416D5E3C200AC8158 /* QuartzCore.framework in Frameworks */,
+				C777234216D5E3B600AC8158 /* CoreVideo.framework in Frameworks */,
+				C777234016D5E3AE00AC8158 /* CoreMedia.framework in Frameworks */,
+				C777233E16D5E3A400AC8158 /* AVFoundation.framework in Frameworks */,
+				C7A8B14C16D4B8E100507C4E /* UIKit.framework in Frameworks */,
+				C7A8B14E16D4B8E100507C4E /* Foundation.framework in Frameworks */,
+				C7A8B15016D4B8E100507C4E /* CoreGraphics.framework in Frameworks */,
+				C777233816D4BB0900AC8158 /* libzbar.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7A8B16D16D4B8E100507C4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7A8B17316D4B8E100507C4E /* SenTestingKit.framework in Frameworks */,
+				C7A8B17416D4B8E100507C4E /* UIKit.framework in Frameworks */,
+				C7A8B17516D4B8E100507C4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C777231A16D4BB0900AC8158 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C777231B16D4BB0900AC8158 /* Headers */,
+				C777233216D4BB0900AC8158 /* libzbar.a */,
+				C777233316D4BB0900AC8158 /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		C777231B16D4BB0900AC8158 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C777231C16D4BB0900AC8158 /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		C777231C16D4BB0900AC8158 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				C777231D16D4BB0900AC8158 /* zbar */,
+				C777232716D4BB0900AC8158 /* zbar.h */,
+				C777232816D4BB0900AC8158 /* ZBarCameraSimulator.h */,
+				C777232916D4BB0900AC8158 /* ZBarCaptureReader.h */,
+				C777232A16D4BB0900AC8158 /* ZBarHelpController.h */,
+				C777232B16D4BB0900AC8158 /* ZBarImage.h */,
+				C777232C16D4BB0900AC8158 /* ZBarImageScanner.h */,
+				C777232D16D4BB0900AC8158 /* ZBarReaderController.h */,
+				C777232E16D4BB0900AC8158 /* ZBarReaderView.h */,
+				C777232F16D4BB0900AC8158 /* ZBarReaderViewController.h */,
+				C777233016D4BB0900AC8158 /* ZBarSDK.h */,
+				C777233116D4BB0900AC8158 /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		C777231D16D4BB0900AC8158 /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				C777231E16D4BB0900AC8158 /* Decoder.h */,
+				C777231F16D4BB0900AC8158 /* Exception.h */,
+				C777232016D4BB0900AC8158 /* Image.h */,
+				C777232116D4BB0900AC8158 /* ImageScanner.h */,
+				C777232216D4BB0900AC8158 /* Processor.h */,
+				C777232316D4BB0900AC8158 /* Scanner.h */,
+				C777232416D4BB0900AC8158 /* Symbol.h */,
+				C777232516D4BB0900AC8158 /* Video.h */,
+				C777232616D4BB0900AC8158 /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		C777233316D4BB0900AC8158 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C777233416D4BB0900AC8158 /* zbar-back.png */,
+				C777233516D4BB0900AC8158 /* zbar-help.html */,
+				C777233616D4BB0900AC8158 /* zbar-helpicons.png */,
+				C777233716D4BB0900AC8158 /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7A8B13F16D4B8E100507C4E = {
+			isa = PBXGroup;
+			children = (
+				C777234516D5E3CC00AC8158 /* libiconv.dylib */,
+				C777234316D5E3C200AC8158 /* QuartzCore.framework */,
+				C777234116D5E3B600AC8158 /* CoreVideo.framework */,
+				C777233F16D5E3AE00AC8158 /* CoreMedia.framework */,
+				C777233D16D5E3A300AC8158 /* AVFoundation.framework */,
+				C777231A16D4BB0900AC8158 /* ZBarSDK */,
+				C7A8B15116D4B8E100507C4E /* SchoolaxEventAdmin */,
+				C7A8B17816D4B8E100507C4E /* SchoolaxEventAdminTests */,
+				C7A8B14A16D4B8E100507C4E /* Frameworks */,
+				C7A8B14916D4B8E100507C4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7A8B14916D4B8E100507C4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7A8B14816D4B8E100507C4E /* SchoolaxEventAdmin.app */,
+				C7A8B17116D4B8E100507C4E /* SchoolaxEventAdminTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7A8B14A16D4B8E100507C4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7A8B14B16D4B8E100507C4E /* UIKit.framework */,
+				C7A8B14D16D4B8E100507C4E /* Foundation.framework */,
+				C7A8B14F16D4B8E100507C4E /* CoreGraphics.framework */,
+				C7A8B17216D4B8E100507C4E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7A8B15116D4B8E100507C4E /* SchoolaxEventAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				C7A8B15A16D4B8E100507C4E /* SECAppDelegate.h */,
+				C7A8B15B16D4B8E100507C4E /* SECAppDelegate.m */,
+				C7A8B16316D4B8E100507C4E /* MainStoryboard_iPhone.storyboard */,
+				C7A8B16616D4B8E100507C4E /* MainStoryboard_iPad.storyboard */,
+				C7A8B16916D4B8E100507C4E /* SECViewController.h */,
+				C7A8B16A16D4B8E100507C4E /* SECViewController.m */,
+				C7A8B15216D4B8E100507C4E /* Supporting Files */,
+			);
+			path = SchoolaxEventAdmin;
+			sourceTree = "<group>";
+		};
+		C7A8B15216D4B8E100507C4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7A8B15316D4B8E100507C4E /* SchoolaxEventAdmin-Info.plist */,
+				C7A8B15416D4B8E100507C4E /* InfoPlist.strings */,
+				C7A8B15716D4B8E100507C4E /* main.m */,
+				C7A8B15916D4B8E100507C4E /* SchoolaxEventAdmin-Prefix.pch */,
+				C7A8B15D16D4B8E100507C4E /* Default.png */,
+				C7A8B15F16D4B8E100507C4E /* Default@2x.png */,
+				C7A8B16116D4B8E100507C4E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7A8B17816D4B8E100507C4E /* SchoolaxEventAdminTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7A8B17E16D4B8E100507C4E /* SchoolaxEventAdminTests.h */,
+				C7A8B17F16D4B8E100507C4E /* SchoolaxEventAdminTests.m */,
+				C7A8B17916D4B8E100507C4E /* Supporting Files */,
+			);
+			path = SchoolaxEventAdminTests;
+			sourceTree = "<group>";
+		};
+		C7A8B17916D4B8E100507C4E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7A8B17A16D4B8E100507C4E /* SchoolaxEventAdminTests-Info.plist */,
+				C7A8B17B16D4B8E100507C4E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7A8B14716D4B8E100507C4E /* SchoolaxEventAdmin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7A8B18316D4B8E100507C4E /* Build configuration list for PBXNativeTarget "SchoolaxEventAdmin" */;
+			buildPhases = (
+				C7A8B14416D4B8E100507C4E /* Sources */,
+				C7A8B14516D4B8E100507C4E /* Frameworks */,
+				C7A8B14616D4B8E100507C4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SchoolaxEventAdmin;
+			productName = SchoolaxEventAdmin;
+			productReference = C7A8B14816D4B8E100507C4E /* SchoolaxEventAdmin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C7A8B17016D4B8E100507C4E /* SchoolaxEventAdminTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7A8B18616D4B8E100507C4E /* Build configuration list for PBXNativeTarget "SchoolaxEventAdminTests" */;
+			buildPhases = (
+				C7A8B16C16D4B8E100507C4E /* Sources */,
+				C7A8B16D16D4B8E100507C4E /* Frameworks */,
+				C7A8B16E16D4B8E100507C4E /* Resources */,
+				C7A8B16F16D4B8E100507C4E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7A8B17716D4B8E100507C4E /* PBXTargetDependency */,
+			);
+			name = SchoolaxEventAdminTests;
+			productName = SchoolaxEventAdminTests;
+			productReference = C7A8B17116D4B8E100507C4E /* SchoolaxEventAdminTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7A8B14016D4B8E100507C4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SEC;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Jeremy Pian";
+			};
+			buildConfigurationList = C7A8B14316D4B8E100507C4E /* Build configuration list for PBXProject "SchoolaxEventAdmin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C7A8B13F16D4B8E100507C4E;
+			productRefGroup = C7A8B14916D4B8E100507C4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7A8B14716D4B8E100507C4E /* SchoolaxEventAdmin */,
+				C7A8B17016D4B8E100507C4E /* SchoolaxEventAdminTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7A8B14616D4B8E100507C4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7A8B15616D4B8E100507C4E /* InfoPlist.strings in Resources */,
+				C7A8B15E16D4B8E100507C4E /* Default.png in Resources */,
+				C7A8B16016D4B8E100507C4E /* Default@2x.png in Resources */,
+				C7A8B16216D4B8E100507C4E /* Default-568h@2x.png in Resources */,
+				C7A8B16516D4B8E100507C4E /* MainStoryboard_iPhone.storyboard in Resources */,
+				C7A8B16816D4B8E100507C4E /* MainStoryboard_iPad.storyboard in Resources */,
+				C777233916D4BB0900AC8158 /* zbar-back.png in Resources */,
+				C777233A16D4BB0900AC8158 /* zbar-help.html in Resources */,
+				C777233B16D4BB0900AC8158 /* zbar-helpicons.png in Resources */,
+				C777233C16D4BB0900AC8158 /* zbar-samples.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7A8B16E16D4B8E100507C4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7A8B17D16D4B8E100507C4E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7A8B16F16D4B8E100507C4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7A8B14416D4B8E100507C4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7A8B15816D4B8E100507C4E /* main.m in Sources */,
+				C7A8B15C16D4B8E100507C4E /* SECAppDelegate.m in Sources */,
+				C7A8B16B16D4B8E100507C4E /* SECViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7A8B16C16D4B8E100507C4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7A8B18016D4B8E100507C4E /* SchoolaxEventAdminTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7A8B17716D4B8E100507C4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7A8B14716D4B8E100507C4E /* SchoolaxEventAdmin */;
+			targetProxy = C7A8B17616D4B8E100507C4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7A8B15416D4B8E100507C4E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7A8B15516D4B8E100507C4E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C7A8B16316D4B8E100507C4E /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7A8B16416D4B8E100507C4E /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C7A8B16616D4B8E100507C4E /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7A8B16716D4B8E100507C4E /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C7A8B17B16D4B8E100507C4E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7A8B17C16D4B8E100507C4E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7A8B18116D4B8E100507C4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7A8B18216D4B8E100507C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7A8B18416D4B8E100507C4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SchoolaxEventAdmin/SchoolaxEventAdmin-Prefix.pch";
+				INFOPLIST_FILE = "SchoolaxEventAdmin/SchoolaxEventAdmin-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SchoolaxEventAdmin/ZBarSDK\"",
+					"\"$(SRCROOT)/ZBarSDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C7A8B18516D4B8E100507C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SchoolaxEventAdmin/SchoolaxEventAdmin-Prefix.pch";
+				INFOPLIST_FILE = "SchoolaxEventAdmin/SchoolaxEventAdmin-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SchoolaxEventAdmin/ZBarSDK\"",
+					"\"$(SRCROOT)/ZBarSDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C7A8B18716D4B8E100507C4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SchoolaxEventAdmin.app/SchoolaxEventAdmin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SchoolaxEventAdmin/SchoolaxEventAdmin-Prefix.pch";
+				INFOPLIST_FILE = "SchoolaxEventAdminTests/SchoolaxEventAdminTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C7A8B18816D4B8E100507C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SchoolaxEventAdmin.app/SchoolaxEventAdmin";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SchoolaxEventAdmin/SchoolaxEventAdmin-Prefix.pch";
+				INFOPLIST_FILE = "SchoolaxEventAdminTests/SchoolaxEventAdminTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7A8B14316D4B8E100507C4E /* Build configuration list for PBXProject "SchoolaxEventAdmin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7A8B18116D4B8E100507C4E /* Debug */,
+				C7A8B18216D4B8E100507C4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7A8B18316D4B8E100507C4E /* Build configuration list for PBXNativeTarget "SchoolaxEventAdmin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7A8B18416D4B8E100507C4E /* Debug */,
+				C7A8B18516D4B8E100507C4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7A8B18616D4B8E100507C4E /* Build configuration list for PBXNativeTarget "SchoolaxEventAdminTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7A8B18716D4B8E100507C4E /* Debug */,
+				C7A8B18816D4B8E100507C4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7A8B14016D4B8E100507C4E /* Project object */;
+}

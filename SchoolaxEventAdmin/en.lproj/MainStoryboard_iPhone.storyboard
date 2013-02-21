@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="SECViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvg-kN-Ylu">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Scan Participant">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanCode:" destination="2" eventType="touchUpInside" id="Pd9-0D-azV"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oDD-D5-aPr">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="343" id="obL-lO-X9M"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="Nd5-9s-Q0f"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIG-XU-JnB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="89h-TK-PfY"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Event name" id="Chl-BV-F18"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oDD-D5-aPr" firstAttribute="top" secondItem="ZIG-XU-JnB" secondAttribute="bottom" type="default" id="3IN-AH-mbK"/>
+                            <constraint firstItem="Dvg-kN-Ylu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Va-1E-mhU"/>
+                            <constraint firstItem="ZIG-XU-JnB" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="JJW-8r-Hcy"/>
+                            <constraint firstAttribute="trailing" secondItem="Dvg-kN-Ylu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ROr-2c-SV1"/>
+                            <constraint firstItem="oDD-D5-aPr" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="hm5-vv-t7y"/>
+                            <constraint firstItem="oDD-D5-aPr" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="oOa-zk-IBS"/>
+                            <constraint firstItem="Dvg-kN-Ylu" firstAttribute="top" secondItem="oDD-D5-aPr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tfm-dV-9tj"/>
+                            <constraint firstItem="ZIG-XU-JnB" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="tsK-Fa-4b1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eventList" destination="oDD-D5-aPr" id="rrT-af-g6r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SECViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SECViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="scanCode:"/>
+                <relationship kind="outlet" name="eventList" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
