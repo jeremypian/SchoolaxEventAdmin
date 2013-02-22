@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SECViewController : UIViewController < ZBarReaderDelegate, UITableViewDataSource>
+@interface SECAttendanceViewController : UIViewController < ZBarReaderDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *eventList;
 

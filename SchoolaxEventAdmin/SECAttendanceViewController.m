@@ -6,19 +6,33 @@
 //  Copyright (c) 2013 Jeremy Pian. All rights reserved.
 //
 
-#import "SECViewController.h"
+#import "SECAttendanceViewController.h"
+#import "AFNetworking/AFJSONRequestOperation.h"
+#import "MBProgressHUD.h"
 
-@interface SECViewController ()
+@interface SECAttendanceViewController ()
 
 @end
 
-@implementation SECViewController
+@implementation SECAttendanceViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.dataArray = [[NSArray alloc] initWithObjects:@"Person1", @"Person2", nil];    
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8000/get-created-events/schoolax/"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"IP Address: %@", JSON[@"events"]);
+        self.dataArray = JSON[@"events"];
+        [self.eventList reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    } failure:nil];
+    
+    [operation start];
 }
 
 - (void)didReceiveMemoryWarning
