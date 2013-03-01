@@ -14,5 +14,10 @@
 
 @property (strong, nonatomic) NSArray *dataArray;
 
+@property (nonatomic) NSString *username;
+@property (nonatomic) NSString *password;
+@property (nonatomic) BOOL isAuthenticated;
+
+- (void) loadEvents;
 - (IBAction)scanCode:(id)sender;
 @end

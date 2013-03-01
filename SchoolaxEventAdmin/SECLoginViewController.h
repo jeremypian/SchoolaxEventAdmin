@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SECLoginViewController : UIViewController
+@interface SECLoginViewController : UIViewController <UITextFieldDelegate>
+- (IBAction)loginClicked:(id)sender;
+- (void) establishConnection;
+
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+@property (strong, nonatomic) NSURLConnection *connection;
 
 @end

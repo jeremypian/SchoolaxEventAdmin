@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0pQ-jH-v70">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="2" customClass="SECAttendanceViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvg-kN-Ylu">
@@ -27,9 +27,6 @@
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oDD-D5-aPr">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="343" id="obL-lO-X9M"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="2" id="Nd5-9s-Q0f"/>
                                 </connections>
@@ -38,9 +35,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Dvg-kN-Ylu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5Va-1E-mhU"/>
+                            <constraint firstItem="Dvg-kN-Ylu" firstAttribute="top" secondItem="oDD-D5-aPr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8Hk-gk-lOq"/>
                             <constraint firstItem="oDD-D5-aPr" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="EGL-5a-IJL"/>
                             <constraint firstAttribute="trailing" secondItem="Dvg-kN-Ylu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ROr-2c-SV1"/>
-                            <constraint firstItem="Dvg-kN-Ylu" firstAttribute="top" secondItem="oDD-D5-aPr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="d6e-Rr-v9U"/>
+                            <constraint firstAttribute="bottom" secondItem="Dvg-kN-Ylu" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="VLI-mG-o9S"/>
                             <constraint firstItem="oDD-D5-aPr" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="hm5-vv-t7y"/>
                             <constraint firstItem="oDD-D5-aPr" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="oOa-zk-IBS"/>
                         </constraints>
@@ -52,14 +50,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="-124"/>
+            <point key="canvasLocation" x="83" y="-178"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="YRy-g3-hzV">
             <objects>
-                <viewController id="RfX-ZJ-rrn" customClass="SECLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="RfX-ZJ-rrn" customClass="SECLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Myg-yI-QXF">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Schoolax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpu-gP-6p9">
@@ -87,13 +85,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s6G-fC-VgK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="schoolax" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s6G-fC-VgK">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RfX-ZJ-rrn" id="DAc-I1-gdp"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edb-tu-8zt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1990106" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edb-tu-8zt">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RfX-ZJ-rrn" id="Bbi-jl-N5q"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDl-1B-hb2">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -105,7 +109,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2" kind="push" id="6Cy-rZ-9WP"/>
+                                    <action selector="loginClicked:" destination="RfX-ZJ-rrn" eventType="touchUpInside" id="x9Q-KH-A7d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,28 +135,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gHF-rt-fww"/>
+                    <connections>
+                        <outlet property="passwordField" destination="edb-tu-8zt" id="Rfb-Vk-vDy"/>
+                        <outlet property="usernameField" destination="s6G-fC-VgK" id="2d8-dy-I92"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVi-3f-DGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="-124"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="BXK-Sj-y35">
-            <objects>
-                <navigationController id="0pQ-jH-v70" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A6o-uL-Y89">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="RfX-ZJ-rrn" kind="relationship" relationship="rootViewController" id="tJf-uo-QGq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Aa-NG-mFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-38" y="-222"/>
+            <point key="canvasLocation" x="531" y="-162"/>
         </scene>
     </scenes>
     <classes>
@@ -168,6 +158,11 @@
         </class>
         <class className="SECLoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SECLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginClicked:"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
