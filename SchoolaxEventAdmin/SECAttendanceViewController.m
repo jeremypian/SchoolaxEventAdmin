@@ -16,46 +16,41 @@
 @end
 
 @implementation SECAttendanceViewController
-- (void)viewDidAppear:(BOOL)animated
-{
-    if(self.isAuthenticated){
-        [self loadEvents];
-        return;
-    }
-    UIStoryboard *storyboard = self.storyboard;
-    SECLoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
 
-    [self presentViewController:loginViewController animated:YES completion:^(){
-        NSLog(@"FINISHED!");
-        self.isAuthenticated = YES;
-    }];
-   
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self loadAttendees];
 }
 
-- (void)loadEvents
+- (id)initWithEventId:(NSString *)_eventId
+{
+    if(self = [super init]) {
+        eventId = _eventId;
+    }
+    return self;
+}
+
+- (void)loadAttendees
 {
     NSLog(@"Loading!");
     self.username = @"schoolax";
     self.password = @"1990106";
+    eventId = @"1334";
     
     // Do any additional setup after loading the view, typically from a nib.
-    NSURL *url = [NSURL URLWithString:@"http://localhost:8000/get-created-events/"];
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8000/get-event-attendees/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     [request setHTTPMethod:@"POST"];
-    NSString *postString = [[NSString alloc] initWithFormat:@"username=%@&password=%@", self.username, self.password];
+    NSString *postString = [[NSString alloc] initWithFormat:@"username=%@&password=%@&event_id=%@", self.username, self.password, eventId];
     NSLog(@"%@", postString);
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSLog(@"Got response");
-        NSLog(@"headlines: %@", JSON[@"headlines"]);
-        NSLog(@"slugs: %@", JSON[@"slugs"]);
-        self.dataArray = JSON[@"headlines"];
+        NSLog(@"names: %@", JSON[@"attendees"]);
+        self.dataArray = JSON[@"attendees"];
         [self.eventList reloadData];
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.view animated:YES];
