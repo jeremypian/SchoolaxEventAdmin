@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SECAttendanceViewController : UIViewController < ZBarReaderDelegate, UITableViewDataSource>{
-    NSString* eventId;
+@interface SECAttendanceViewController : UIViewController < ZBarReaderDelegate, UITableViewDataSource> {
+    NSString *attendee_username;
 }
-- (id)initWithEventId:(NSString*)_eventId;
 
 @property (weak, nonatomic) IBOutlet UITableView *eventList;
 
 @property (strong, nonatomic) NSArray *dataArray;
 
 @property (nonatomic) NSString *username;
+@property (nonatomic) NSString *eventId;
 @property (nonatomic) NSString *password;
 @property (nonatomic) BOOL isAuthenticated;
 

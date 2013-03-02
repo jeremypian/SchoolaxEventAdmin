@@ -9,6 +9,7 @@
 #import "SECTableViewController.h"
 #import "SECLoginViewController.h"
 #import "SECAttendanceViewController.h"
+#import "SECAppData.h"
 #import "AFNetworking/AFJSONRequestOperation.h"
 #import "MBProgressHUD.h"
 
@@ -34,7 +35,9 @@
         [self loadEvents];
         return;
     }
-    UIStoryboard *storyboard = self.storyboard;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
+
+    NSLog(@"%@", storyboard);
     SECLoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     
     [self presentViewController:loginViewController animated:YES completion:^(){
@@ -42,13 +45,15 @@
         self.isAuthenticated = YES;
     }];
     
+    
 }
 
 - (void)loadEvents
 {
     NSLog(@"Loading!");
-    self.username = @"schoolax";
-    self.password = @"1990106";
+    SECAppData *data = [SECAppData getInstance];
+    self.username = [data username];
+    self.password = [data password];
     
     // Do any additional setup after loading the view, typically from a nib.
     NSURL *url = [NSURL URLWithString:@"http://localhost:8000/get-created-events/"];
@@ -78,7 +83,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -173,12 +177,14 @@
     int row = [indexPath row];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSLog(@"Event name: %@, event ID: %@", cell.textLabel.text, self.eventIds[row]);
-    UIStoryboard *storyboard = self.storyboard;
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
     SECAttendanceViewController *avc = [storyboard instantiateViewControllerWithIdentifier:@"AttendanceViewController"];
-    
-    [self presentViewController:avc animated:YES completion:^(){
-        NSLog(@"FINISHED!");
-    }];
+    [avc setEventId:self.eventIds[row]];
+    [avc setUsername:self.username];
+    [avc setPassword:self.password];
+    NSLog(@"%@", [self navigationController]);
+    NSLog(@"%@", avc);
+    [self.navigationController pushViewController:avc animated:YES];
     
     // Navigation logic may go here. Create and push another view controller.
     /*

@@ -23,27 +23,16 @@
     [self loadAttendees];
 }
 
-- (id)initWithEventId:(NSString *)_eventId
-{
-    if(self = [super init]) {
-        eventId = _eventId;
-    }
-    return self;
-}
-
 - (void)loadAttendees
 {
     NSLog(@"Loading!");
-    self.username = @"schoolax";
-    self.password = @"1990106";
-    eventId = @"1334";
     
     // Do any additional setup after loading the view, typically from a nib.
     NSURL *url = [NSURL URLWithString:@"http://localhost:8000/get-event-attendees/"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     [request setHTTPMethod:@"POST"];
-    NSString *postString = [[NSString alloc] initWithFormat:@"username=%@&password=%@&event_id=%@", self.username, self.password, eventId];
+    NSString *postString = [[NSString alloc] initWithFormat:@"username=%@&password=%@&event_id=%@", self.username, self.password, self.eventId];
     NSLog(@"%@", postString);
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     
@@ -81,15 +70,63 @@
                        to: 0];
     
     // present and release the controller
-    [self presentModalViewController: reader
-                            animated: YES];
+    [self presentViewController:reader animated:YES completion:nil];
 }
 
 - (void) imagePickerController: (UIImagePickerController*) reader
  didFinishPickingMediaWithInfo: (NSDictionary*) info
 {
+    NSLog(@"captured data");
+    NSLog(@"%@", info);
+    
+    // ADD: get the decode results
+    id<NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
+    ZBarSymbol *symbol = nil;
+    for(symbol in results)
+        break;
+    
+    // EXAMPLE: do something useful with the barcode data
+    attendee_username = symbol.data;
+    [reader dismissViewControllerAnimated:YES completion:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"User Check-in"
+                                                    message:[[NSString alloc] initWithFormat:@"Are you sure you want to %@ in to this event?", attendee_username]
+                                                   delegate:self
+                                          cancelButtonTitle:@"No"
+                                          otherButtonTitles:@"Yes", nil];
+    [alert show];
+    ;
     // populate resultText and resultImage
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if([title isEqualToString:@"Yes"])
+    {
+        // Check the user in
+        NSLog(@"Checking user %@ in.", attendee_username);
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        NSURL *url = [NSURL URLWithString:@"http://localhost:8000/checkin"];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        
+        [request setHTTPMethod:@"POST"];
+        NSString *postString = [[NSString alloc] initWithFormat:@"username=%@&password=%@&event_id=%@&attendee_username=%@", self.username, self.password, self.eventId, attendee_username];
+        NSLog(@"%@", postString);
+        [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+            NSLog(@"Status: %@", JSON[@"status"]);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            });
+        } failure:nil];
+        
+        // Reload the attendees table
+        [self loadAttendees];
+    }
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;

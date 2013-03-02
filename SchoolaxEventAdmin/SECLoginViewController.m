@@ -7,7 +7,8 @@
 //
 
 #import "SECLoginViewController.h"
-#import "SECAttendanceViewController.h"
+#import "SECTableViewController.h"
+#import "SECAppData.h"
 #import "AFNetworking/AFJSONRequestOperation.h"
 
 @interface SECLoginViewController ()
@@ -41,6 +42,9 @@
     NSLog(@"%@", self.usernameField.text);
     NSLog(@"%@", self.passwordField.text);
     [self establishConnection];
+    SECAppData* data = [SECAppData getInstance];
+    [data setUsername:self.usernameField.text];
+    [data setPassword:self.passwordField.text];
     [self dismissViewControllerAnimated:YES completion:nil];
 
     /*

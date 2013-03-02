@@ -7,12 +7,28 @@
 //
 
 #import "SECAppDelegate.h"
+#import "SECTableViewController.h"
+#import "SECAttendanceViewController.h"
+
 
 @implementation SECAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    /*
+    UINavigationController* navController=[[UINavigationController alloc] init];
+    SECTableViewController *firstController=[[SECTableViewController alloc] init];
+    [navController pushViewController:firstController animated:NO];
+    [self.window addSubview: navController.view];
+     */
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
+    UIViewController *rvc = [storyboard instantiateViewControllerWithIdentifier:@"TableViewController"];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:rvc];
+    [[self window] setRootViewController:self.navigationController];
+    
+    //template code
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
