@@ -56,7 +56,7 @@
     self.password = [data password];
     
     // Do any additional setup after loading the view, typically from a nib.
-    NSURL *url = [NSURL URLWithString:@"http://localhost:8000/get-created-events/"];
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"%@/get-created-events/", [[SECAppData getInstance] serverUrl]]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     [request setHTTPMethod:@"POST"];

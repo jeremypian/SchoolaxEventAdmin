@@ -9,6 +9,7 @@
 #import "SECAttendanceViewController.h"
 #import "SECLoginViewController.h"
 #import "AFNetworking/AFJSONRequestOperation.h"
+#import "SECAppData.h"
 #import "MBProgressHUD.h"
 
 @interface SECAttendanceViewController ()
@@ -28,7 +29,7 @@
     NSLog(@"Loading!");
     
     // Do any additional setup after loading the view, typically from a nib.
-    NSURL *url = [NSURL URLWithString:@"http://localhost:8000/get-event-attendees/"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/get-event-attendees/", [[SECAppData getInstance] serverUrl]]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     [request setHTTPMethod:@"POST"];
@@ -41,9 +42,6 @@
         NSLog(@"names: %@", JSON[@"attendees"]);
         self.dataArray = JSON[@"attendees"];
         [self.eventList reloadData];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-        });
     } failure:nil];
     
     [operation start];
@@ -107,7 +105,7 @@
         NSLog(@"Checking user %@ in.", attendee_username);
         
         // Do any additional setup after loading the view, typically from a nib.
-        NSURL *url = [NSURL URLWithString:@"http://localhost:8000/checkin"];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/checkin", [[SECAppData getInstance] serverUrl]]];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         
         [request setHTTPMethod:@"POST"];
@@ -117,11 +115,9 @@
         
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
             NSLog(@"Status: %@", JSON[@"status"]);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUDForView:self.view animated:YES];
-            });
+
         } failure:nil];
-        
+        [operation start];
         // Reload the attendees table
         [self loadAttendees];
     }

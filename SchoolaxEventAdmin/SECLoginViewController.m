@@ -57,7 +57,7 @@
 
 - (void) establishConnection
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://127.0.0.1:8000/login/"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/login/", [[SECAppData getInstance] serverUrl]]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                        timeoutInterval:60.0];

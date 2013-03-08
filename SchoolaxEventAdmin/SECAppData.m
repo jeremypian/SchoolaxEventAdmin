@@ -11,6 +11,7 @@
 @implementation SECAppData
 @synthesize username;
 @synthesize password;
+@synthesize serverUrl;
 static SECAppData *instance =nil;
 +(SECAppData *)getInstance
 {
@@ -20,6 +21,8 @@ static SECAppData *instance =nil;
         {
             
             instance= [SECAppData new];
+            [instance setServerUrl:@"http://qa.schoolax.com"];
+            //[instance setServerUrl:@"http://127.0.0.1:8000"];
         }
     }
     return instance;

@@ -12,10 +12,12 @@
     
     NSString *username;
     NSString *password;
+    NSString *serverUrl;
     
 }
 @property(nonatomic,retain)NSString *username;
 @property(nonatomic,retain)NSString *password;
+@property(nonatomic,retain)NSString *serverUrl;
 +(SECAppData*)getInstance;
 @end
 
