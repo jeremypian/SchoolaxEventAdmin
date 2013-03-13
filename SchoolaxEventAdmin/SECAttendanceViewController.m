@@ -21,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setTitle:@"Attendees"];
     [self loadAttendees];
 }
 
@@ -150,8 +151,9 @@
     cell.imageView.image = [UIImage imageNamed:@"flower.png"];
     
     // set the accessory view:
-    cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
-    
+    cell.accessoryType =  UITableViewCellAccessoryCheckmark;
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
 }
+
 @end

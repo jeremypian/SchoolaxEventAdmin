@@ -31,6 +31,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear: animated];
+    [self setTitle:@"My Events"];
     if(self.isAuthenticated){
         [self loadEvents];
         return;

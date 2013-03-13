@@ -28,6 +28,8 @@
 		C777236716D6CCE900AC8158 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C777235D16D6CCE900AC8158 /* AFXMLRequestOperation.m */; };
 		C777236816D6CCE900AC8158 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C777235F16D6CCE900AC8158 /* UIImageView+AFNetworking.m */; };
 		C77723A516D6FB1A00AC8158 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C77723A416D6FB1A00AC8158 /* MBProgressHUD.m */; };
+		C77AED8116F04160000DF9C7 /* login_screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C77AED7F16F04160000DF9C7 /* login_screen.jpg */; };
+		C77AED8216F04160000DF9C7 /* login_screen.psd in Resources */ = {isa = PBXBuildFile; fileRef = C77AED8016F04160000DF9C7 /* login_screen.psd */; };
 		C7989AB516E0886E00220A6F /* SECTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7989AB416E0886E00220A6F /* SECTableViewController.m */; };
 		C7A8B14C16D4B8E100507C4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8B14B16D4B8E100507C4E /* UIKit.framework */; };
 		C7A8B14E16D4B8E100507C4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8B14D16D4B8E100507C4E /* Foundation.framework */; };
@@ -113,6 +115,8 @@
 		C777235F16D6CCE900AC8158 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		C77723A316D6FB1A00AC8158 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		C77723A416D6FB1A00AC8158 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		C77AED7F16F04160000DF9C7 /* login_screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_screen.jpg; sourceTree = "<group>"; };
+		C77AED8016F04160000DF9C7 /* login_screen.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_screen.psd; sourceTree = "<group>"; };
 		C7989AB316E0886E00220A6F /* SECTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECTableViewController.h; sourceTree = "<group>"; };
 		C7989AB416E0886E00220A6F /* SECTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SECTableViewController.m; sourceTree = "<group>"; };
 		C7A8B14816D4B8E100507C4E /* SchoolaxEventAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchoolaxEventAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,9 +267,19 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		C77AED7E16F04160000DF9C7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C77AED7F16F04160000DF9C7 /* login_screen.jpg */,
+				C77AED8016F04160000DF9C7 /* login_screen.psd */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		C7A8B13F16D4B8E100507C4E = {
 			isa = PBXGroup;
 			children = (
+				C77AED7E16F04160000DF9C7 /* images */,
 				C777234516D5E3CC00AC8158 /* libiconv.dylib */,
 				C777234316D5E3C200AC8158 /* QuartzCore.framework */,
 				C777234116D5E3B600AC8158 /* CoreVideo.framework */,
@@ -437,6 +451,8 @@
 				C777233A16D4BB0900AC8158 /* zbar-help.html in Resources */,
 				C777233B16D4BB0900AC8158 /* zbar-helpicons.png in Resources */,
 				C777233C16D4BB0900AC8158 /* zbar-samples.png in Resources */,
+				C77AED8116F04160000DF9C7 /* login_screen.jpg in Resources */,
+				C77AED8216F04160000DF9C7 /* login_screen.psd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
