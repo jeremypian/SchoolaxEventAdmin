@@ -21,8 +21,8 @@ static SECAppData *instance =nil;
         {
             
             instance= [SECAppData new];
-            //[instance setServerUrl:@"http://qa.schoolax.com"];
-            [instance setServerUrl:@"http://127.0.0.1:8000"];
+            [instance setServerUrl:@"http://qa.schoolax.com"];
+            //[instance setServerUrl:@"http://127.0.0.1:8000"];
         }
     }
     return instance;
