@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *eventList;
 
 @property (strong, nonatomic) NSArray *dataArray;
+@property (strong, nonatomic) NSArray *checkedInUsers;
 
 @property (nonatomic) NSString *username;
 @property (nonatomic) NSString *eventId;

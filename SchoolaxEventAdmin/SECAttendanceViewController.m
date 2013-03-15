@@ -41,7 +41,10 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSLog(@"Got response");
         NSLog(@"names: %@", JSON[@"attendees"]);
+        NSLog(@"checkedin: %@", JSON[@"checked_in_users"]);
+
         self.dataArray = JSON[@"attendees"];
+        self.checkedInUsers = JSON[@"checked_in_users"];
         [self.eventList reloadData];
     } failure:nil];
     
@@ -151,7 +154,13 @@
     cell.imageView.image = [UIImage imageNamed:@"flower.png"];
     
     // set the accessory view:
-    cell.accessoryType =  UITableViewCellAccessoryCheckmark;
+    BOOL checkedin = [[self.checkedInUsers objectAtIndex:indexPath.row] boolValue];
+    if ( checkedin == YES ) {
+        cell.accessoryType =  UITableViewCellAccessoryCheckmark;
+    }
+    else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
 }
