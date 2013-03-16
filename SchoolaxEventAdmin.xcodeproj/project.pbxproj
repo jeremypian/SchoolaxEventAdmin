@@ -49,6 +49,8 @@
 		C7A8B17D16D4B8E100507C4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A8B17B16D4B8E100507C4E /* InfoPlist.strings */; };
 		C7A8B18016D4B8E100507C4E /* SchoolaxEventAdminTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8B17F16D4B8E100507C4E /* SchoolaxEventAdminTests.m */; };
 		C7B0A0D316E2A6B800672E68 /* SECAppData.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B0A0D216E2A6B800672E68 /* SECAppData.m */; };
+		C7FE7BF216F3FB3000BC5BCC /* logo_400_400.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FE7BF116F3FB3000BC5BCC /* logo_400_400.png */; };
+		C7FE7BF416F3FB4800BC5BCC /* logo_400_400.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FE7BF316F3FB4800BC5BCC /* logo_400_400.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,8 @@
 		C7A8B17F16D4B8E100507C4E /* SchoolaxEventAdminTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchoolaxEventAdminTests.m; sourceTree = "<group>"; };
 		C7B0A0D116E2A6B800672E68 /* SECAppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECAppData.h; sourceTree = "<group>"; };
 		C7B0A0D216E2A6B800672E68 /* SECAppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SECAppData.m; sourceTree = "<group>"; };
+		C7FE7BF116F3FB3000BC5BCC /* logo_400_400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_400_400.png; sourceTree = "<group>"; };
+		C7FE7BF316F3FB4800BC5BCC /* logo_400_400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_400_400.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +274,7 @@
 		C77AED7E16F04160000DF9C7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C7FE7BF116F3FB3000BC5BCC /* logo_400_400.png */,
 				C77AED7F16F04160000DF9C7 /* login_screen.jpg */,
 				C77AED8016F04160000DF9C7 /* login_screen.psd */,
 			);
@@ -279,6 +284,7 @@
 		C7A8B13F16D4B8E100507C4E = {
 			isa = PBXGroup;
 			children = (
+				C7FE7BF316F3FB4800BC5BCC /* logo_400_400.png */,
 				C77AED7E16F04160000DF9C7 /* images */,
 				C777234516D5E3CC00AC8158 /* libiconv.dylib */,
 				C777234316D5E3C200AC8158 /* QuartzCore.framework */,
@@ -453,6 +459,8 @@
 				C777233C16D4BB0900AC8158 /* zbar-samples.png in Resources */,
 				C77AED8116F04160000DF9C7 /* login_screen.jpg in Resources */,
 				C77AED8216F04160000DF9C7 /* login_screen.psd in Resources */,
+				C7FE7BF216F3FB3000BC5BCC /* logo_400_400.png in Resources */,
+				C7FE7BF416F3FB4800BC5BCC /* logo_400_400.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
