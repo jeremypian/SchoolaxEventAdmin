@@ -91,7 +91,7 @@
     attendee_username = symbol.data;
     [reader dismissViewControllerAnimated:YES completion:nil];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"User Check-in"
-                                                    message:[[NSString alloc] initWithFormat:@"Are you sure you want to %@ in to this event?", attendee_username]
+                                                    message:[[NSString alloc] initWithFormat:@"Are you sure you want to check %@ in to this event?", attendee_username]
                                                    delegate:self
                                           cancelButtonTitle:@"No"
                                           otherButtonTitles:@"Yes", nil];
